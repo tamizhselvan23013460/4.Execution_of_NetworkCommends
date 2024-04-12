@@ -29,10 +29,49 @@ This commands includes
 <BR>
 
 ## Program  
-![traceroute program](https://github.com/tamizhselvan23013460/4.Execution_of_NetworkCommends/assets/150231370/4bd6c9d8-f534-407d-9eeb-12cbeb8dc247)
+### Ping command
+### Client.py
+```
+import socket 
+from pythonping import ping 
+s=socket.socket() 
+s.bind(('localhost'8000)) 
+s.listen(5) 
+c,addr=s.accept() 
+while True: 
+    hostname=c.recv(1024).decode() 
+    try: 
+        c.send(str(ping(hostname, verbose=False)).encode()) 
+    except KeyError: 
+        c.send("Not Found".encode())
+```
+### Server.py
+```
+import socket 
+s=socket.socket() 
+s.connect(('localhost',8000)) 
+while True: 
+    ip=input("Enter the website you want to ping ") 
+    s.send(ip.encode()) 
+    print(s.recv(1024).decode())
+```
+### TRACEROUTE COMMAND
+```
+from scapy.all import* 
+target = ["www.google.com"] 
+result, unans = traceroute(target,maxttl=32) 
+print(result,unans)
+```
 
 ## Output
-![traceroute output](https://github.com/tamizhselvan23013460/4.Execution_of_NetworkCommends/assets/150231370/581fb189-5f41-4407-b7b0-bf60a7efa3cc)
+### client.py
+<img width="740" alt="4 client ouput" src="https://github.com/Ganesh23013987/4.Execution_of_NetworkCommends/assets/147473768/7699b863-f7f5-4b9f-9db7-7a3511f19a52">
+
+### Server.py
+<img width="740" alt="4 server output" src="https://github.com/Ganesh23013987/4.Execution_of_NetworkCommends/assets/147473768/5e5b83c5-847d-4fb4-b85d-d1d2c801f77f">
+
+### TRACEROUTE COMMAND
+![traceroute output](https://github.com/tamizhselvan23013460/4.Execution_of_NetworkCommends/assets/150231370/b79d18f2-b34d-4cf3-8895-a935653e53dd)
 
 ## Result
 Thus Execution of Network commands Performed 
