@@ -71,7 +71,7 @@ print(result,unans)
 <img width="740" alt="4 server output" src="https://github.com/Ganesh23013987/4.Execution_of_NetworkCommends/assets/147473768/5e5b83c5-847d-4fb4-b85d-d1d2c801f77f">
 
 ### TRACEROUTE COMMAND
-![traceroute output](https://github.com/tamizhselvan23013460/4.Execution_of_NetworkCommends/assets/150231370/b79d18f2-b34d-4cf3-8895-a935653e53dd)
+<img width="740" alt="Traceroute cmd" src="https://github.com/Ganesh23013987/4.Execution_of_NetworkCommends/assets/147473768/d689bf3e-8c86-4991-b7dd-258e6329d92b">
 
 ## Result
 Thus Execution of Network commands Performed 
